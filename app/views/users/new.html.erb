@@ -1,15 +1,12 @@
 <h3>New User Signup Form</h3>
 
-<form method="post" action="/users">
-<input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
-        <label for="username">User Name:</label>
-        <input type="text" name="user[username]" id="">
-        <label for="email">E-mail:</label>
-        <input type="email" name="user[email]" id="">
-        <label for="password">Password:</label>
-        <input type="password" name="user[password]" id="">
-        <label for="password">Password Confirm:</label>
-        <input type="password" name="password_confirm" id="">
 
-        <button type="submit" class="btn btn-primary">Submit</button>
-</form>
+<%= form_tag('/users') %>
+<%= label_tag 'username' %>
+<%= text_field_tag 'username' %>
+<%= label_tag 'email' %>
+<%= email_field_tag 'email' %>
+<%= label_tag 'password' %>
+<%= password_field_tag 'password' %>
+<%= password_field_tag 'password_confirm' %>
+<%= button_tag %>
