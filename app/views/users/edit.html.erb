@@ -1,0 +1,18 @@
+<h1>Edit a particuler User</h1>
+<div>
+  <%= form_for @user, url: {action: "update"}, html: {method: "patch"} do |f| %>
+    <%= f.label 'your username here' %>
+    <%= f.text_field :username, :placeholder => 'username' %>
+    
+    <%= f.label 'your email here' %>
+    <%= f.email_field :email, :placeholder => 'example@example.com' %>
+
+    <%= f.label 'Enter your password' %>
+    <%= f.password_field :password %>
+
+    <%= f.label 'Confirm the password' %>
+    <%= f.password_field :password_confirmation %>
+
+    <%= f.submit "Create my account" %>
+  <% end %>
+</div>
